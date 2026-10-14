@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: #245c8a;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(900px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.nav,
+.nav-links,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav {
+  min-height: 64px;
+}
+
+.brand {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.page-content {
+  min-height: calc(100vh - 130px);
+  padding-block: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  justify-self: end;
+}
+
+.research-list {
+  max-width: 720px;
+  margin-top: 36px;
+}
+
+.research-item {
+  padding-block: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.research-item h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.research-item p {
+  margin: 0;
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-size: 13px;
+  padding-block: 18px;
+}
+
+.footer a {
+  color: inherit;
+}
+
+@media (max-width: 560px) {
+  .nav,
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 12px;
+  }
+
+  .page-content {
+    padding-block: 48px;
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.profiles {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+.profiles ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 700px;
+  margin-top: 16px;
+}
+
+.photo-gallery img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
